@@ -1,0 +1,47 @@
+{% extends "seller_app/seller_master.html" %}
+{% load static %}
+{% block header %}
+<style>
+  img {
+    width: auto;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+
+
+  }
+</style>
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+<div class="container-fluid" style="padding: 20px;">
+  <div class="row">
+    {% for product in products %}
+    <div class="col-md-3">
+
+
+      <div class="card" style="width: 15rem;">
+        <img src="{{product.image.url }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.product_name }}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <button type="submit" class="btn btn-primary">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

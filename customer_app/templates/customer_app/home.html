@@ -1,0 +1,78 @@
+{% extends "customer_app/customer_master.html" %}
+{% load static %}
+{% block header %}
+<style>
+  .product-card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+  }
+
+  .product-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .product-card .product-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+  .product-card .product-price .product-description {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 10px;
+  }
+
+  .product-card .btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  img {
+    width: auto;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+
+
+  }
+</style>
+
+
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<div class="container-fluid" style="padding: 20px;">
+  <div class="row">
+    {% for product in products %}
+    <div class="col-md-3">
+
+
+      <div class="card" style="width: 15rem;">
+        <img src="{{product.image.url }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.product_name }}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <button type="submit" class="btn btn-primary">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</div>
+
+
+{% endblock %}

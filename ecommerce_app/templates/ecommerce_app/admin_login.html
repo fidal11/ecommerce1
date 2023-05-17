@@ -1,0 +1,44 @@
+{% extends "ecommerce_app/master.html" %}
+{% load static %}
+{% block header %}
+
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="container-fluid admin-login">
+
+
+
+  <table>
+    <form method="post" action="#">
+      <tr>
+        <td>
+          <h1>Admin</h1>
+        </td>
+        <td>
+          <h1>Login</h1>
+        </td>
+      </tr>
+      <tr>
+        <td>Username:</td>
+        <td><input type="text" name="username" required></td>
+      </tr>
+      <tr>
+        <td>Password:</td>
+        <td><input type="password" name="password" required></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input type="submit" value="Login"></td>
+      </tr>
+    </form>
+  </table>
+
+
+</div>
+
+{% endblock %}

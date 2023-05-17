@@ -1,0 +1,111 @@
+{% extends "seller_app/seller_master.html" %}
+{% load static %}
+{% block header %}
+<style>
+	form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		margin-top: 50px;
+	}
+
+	.form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	input[type=text] {
+		margin: 10px;
+		padding: 10px;
+		width: 500px;
+		border-radius: 5px;
+		border: 1px solid #ccc;
+	}
+
+	input[type=submit] {
+		background-color: #4CAF50;
+		color: white;
+		border: none;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 10px;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+
+	label {
+		margin: 10px;
+	}
+
+	.signup {
+		text-align: center;
+	}
+</style>
+
+
+
+{% endblock %}
+
+
+
+{% block content %}
+<div class="container-fluid form">
+	<div class="" style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+		<h3>ADD PRODUCT</h3>
+	</div>
+	<table>
+		{{ message }}
+
+
+
+		<form action="" method="POST" enctype="multipart/form-data">
+			{% csrf_token %}
+
+			<tr>
+				<td><label for="name">Product Name:</label></td>
+				<td><input type="text" id=" " name="p_name"></td>
+			</tr>
+
+			<tr>
+				<td><label for="mobilno">Description :</label></td>
+				<td><input type="text" name="p_des"></td>
+			</tr>
+
+			<tr>
+				<td><label for="email">Product Stock:</label></td>
+				<td><input type="text" name="p_stock"></td>
+
+			</tr>
+
+
+
+
+			<tr>
+				<td><label for="">Product Code :</label></td>
+				<td><input type="text" name="p_code"></td>
+			</tr>
+
+			<tr>
+				<td><label for="">Product Price :</label></td>
+				<td><input type="text" name="p_price"></td>
+			</tr>
+			<tr>
+				<td><label for="">Image</label></td>
+				<td><input type="file" name="p_image"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Submit"></td>
+			</tr>
+
+		</form>
+	</table>
+</div>
+
+
+{% endblock %}

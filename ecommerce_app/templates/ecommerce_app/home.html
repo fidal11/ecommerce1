@@ -1,0 +1,53 @@
+{% extends "ecommerce_app/master.html" %}
+{% load static %}
+{% block header %}
+
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+
+
+
+<div class="container-fluid main">
+
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h4 class="card-title">Admin</h4>
+      <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+        content.</p>
+      <a href="{% url 'ecommerce_app:admin_login'%}" class="card-link">Login</a>
+
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h4 class="card-title">Seller</h4>
+      <h6 class="card-subtitle mb-2 text-body-secondary"> </h6>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+        content.</p>
+      <a href="{% url 'ecommerce_app:seller_login'%}" class="card-link">Login</a>
+      <a href="{% url 'ecommerce_app:seller_signup'%}" class="card-link">Sign Up</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h4 class="card-title">Customer</h4>
+      <h6 class="card-subtitle mb-2 text-body-secondary"> </h6>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+        content.</p>
+      <a href="{% url 'ecommerce_app:customer_login'%}" class="card-link">Login</a>
+      <a href="{% url 'ecommerce_app:customer_signup'%}" class="card-link">Sign Up</a>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

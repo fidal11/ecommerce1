@@ -1,0 +1,45 @@
+{% extends "ecommerce_app/master.html" %}
+{% load static %}
+{% block header %}
+ 
+
+{% endblock %}
+
+
+
+{% block content %}
+
+    <div class="container-fluid admin-login">
+        
+           
+      
+      <table>
+        <form method="POST" action="">
+          {% csrf_token %}
+          <tr>
+            <td><h1>Customer</h1></td>
+            <td><h1>Login</h1></td>
+          </tr>
+          <tr>
+            <td>Email:</td>
+            <td><input type="text" name="email" required></td>
+          </tr>
+          <tr>
+            <td>Password:</td>
+            <td><input type="password" name="password" required></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td> <button type="submit" class="btn btn-success">Login</button> </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Don't have an account <a href="{% url 'ecommerce_app:customer_signup'%}">Sign up</a></td>
+          </tr>
+        </form>
+      </table>
+           
+        
+    </div>
+    
+{% endblock %}
